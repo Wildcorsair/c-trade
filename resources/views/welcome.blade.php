@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Electronic Store a Ecommerce Online Shopping Category Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <title>Electronic Store a Ecommerce Online Shopping</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,17 +17,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- //for-mobile-apps -->
     <!-- Custom Theme files -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/fasthover.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{!! asset('css/bootstrap.css') !!}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{!! asset('css/style.css') !!}" rel="stylesheet" type="text/css" media="all" />
+    {{--<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />--}}
+    <link href="{!! asset('css/fasthover.css') !!}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{!! asset('css/popuo-box.css') !!}" rel="stylesheet" type="text/css" media="all" />
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="{!! asset('css/font-awesome.css') !!}" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- js -->
-    <script src="js/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/jquery.countdown.css" /> <!-- countdown -->
+    <script src="{!! asset('js/jquery.min.js') !!}"></script>
+    <link href="{!! asset('css/jquery.countdown.css') !!}" rel="stylesheet" /> <!-- countdown -->
     <!-- //js -->
     <!-- web fonts -->
     <link href='//fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
@@ -46,7 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <!-- for bootstrap working -->
-<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<script src="{!! asset('js/bootstrap-3.1.1.min.js') !!}" type="text/javascript"></script>
 <!-- //for bootstrap working -->
 
 @include('_partials.header_modal')
@@ -72,7 +73,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </a>
             </div>
             <!-- pop-up-box -->
-            <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+            <script src="{!! asset('js/jquery.magnific-popup.js') !!}" type="text/javascript"></script>
             <!--//pop-up-box -->
             <div id="small-dialog" class="mfp-hide">
                 <iframe src="https://www.youtube.com/embed/ZQa6GUVnbNM"></iframe>
@@ -1277,7 +1278,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
             });
         </script>
-        <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+        <script type="text/javascript" src="{!! asset('js/jquery.flexisel.js') !!}"></script>
     </div>
 </div>
 <!-- //top-brands -->
@@ -1300,7 +1301,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //newsletter -->
 @include('_partials.footer')
 <!-- cart-js -->
-<script src="js/minicart.js"></script>
+<script src="{!! asset('js/minicart.js') !!}"></script>
 <script>
     w3ls.render();
 
