@@ -13,7 +13,7 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html" class="act">Home</a></li>
+                    <li><a href="{{ url('/') }}" class="act">Home</a></li>
                     <!-- Mega Menu -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -56,14 +56,14 @@
                             </div>
                         </ul>
                     </li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="{{ url('about') }}">About Us</a></li>
                     <li class="w3pages"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="icons.html">Web Icons</a></li>
                             <li><a href="codes.html">Short Codes</a></li>
                         </ul>
                     </li>
-                    <li><a href="mail.html">Mail Us</a></li>
+                    <li><a href="{{ route('mailUs') }}">Mail Us</a></li>
                 </ul>
             </div>
         </nav>
