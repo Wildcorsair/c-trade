@@ -80,6 +80,6 @@
     </div>
 </div>
 <script>
-    $('#myModal88').modal('show');
+//    $('#myModal88').modal('show');
 </script>
 <!-- header modal -->
