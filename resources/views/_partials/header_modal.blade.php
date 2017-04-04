@@ -20,13 +20,13 @@
                                 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                     <div class="facts">
                                         <div class="register">
-                                            <form action="#" method="post">
-                                                <input name="Email" placeholder="Email Address" type="text" required="">
-                                                <input name="Password" placeholder="Password" type="password" required="">
+                                            <!-- <form action="#" method="post"> -->
+                                                <input name="email" placeholder="Email Address" type="text" required="">
+                                                <input name="password" placeholder="Password" type="password" required="">
                                                 <div class="sign-up">
                                                     <input type="submit" value="Sign in"/>
                                                 </div>
-                                            </form>
+                                            <!-- </form> -->
                                         </div>
                                     </div>
                                 </div>
