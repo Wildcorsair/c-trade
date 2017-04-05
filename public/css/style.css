@@ -67,6 +67,7 @@ input[type="submit"],.panel-body ul li a,.checkout-right-basket a,.additional_in
 	margin-top: 0.5em;
     background-color: #fff;
     float: left;
+    margin-right: 10px;
 }
 .w3l_login a span{
 	top:1.3em;
@@ -5016,6 +5017,11 @@ td.invert-image a img {
     display: inline;
     border: 0;
     margin-top: 21px;
-    margin-left: 10px;
     height: 20px;
+}
+#user-details {
+    float: right;
+    width: 0;
+    margin-top: 21px;
+    font-size: .8em;
 }

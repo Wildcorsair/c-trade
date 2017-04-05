@@ -9,6 +9,7 @@
                     {{ csrf_field() }}
                     <button class="glyphicon glyphicon-log-out" aria-hidden="true"></button>
                 </form>
+                <div id="user-details">{{ Auth::user()->first_name }}</div>
             @else
                 <a href="{{ url('login') }}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
                 <a href="{{ url('register') }}" id="register-link">Register</a>
