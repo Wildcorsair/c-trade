@@ -55,7 +55,8 @@ input[type="submit"],.panel-body ul li a,.checkout-right-basket a,.additional_in
     text-align: center;
     margin-top: 0.5em;
 }
-.w3l_login a {
+.w3l_login a,
+.w3l_login button {
     font-size: .8em;
     color: #3c43a4;
     width: 50px;
@@ -64,6 +65,8 @@ input[type="submit"],.panel-body ul li a,.checkout-right-basket a,.additional_in
     text-align: center;
     border: 1px solid #3c43a4;
 	margin-top: 0.5em;
+    background-color: #fff;
+    float: left;
 }
 .w3l_login a span{
 	top:1.3em;
@@ -1712,6 +1715,7 @@ h3.other-nw {
 }
 .panel-default {
     border-color: #FFF;
+    margin: 35px 5px;
 }
 .panel-default > .panel-heading {
     border-color: #FFF;
@@ -4988,4 +4992,30 @@ td.invert-image a img {
 	.w3l_faq_grid {
 		margin-bottom: 1em;
 	}
+}
+
+/* -- custom styles -- */
+
+#remember-me-checkbox {
+    left: 60px;
+}
+.panel-caption {
+    margin-left: 115px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.help-message-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #a94442;
+    font-size: 11px;
+}
+#register-link {
+    display: inline;
+    border: 0;
+    margin-top: 21px;
+    margin-left: 10px;
+    height: 20px;
 }

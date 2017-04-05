@@ -22,10 +22,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //for-mobile-apps -->
     <!-- Custom Theme files -->
     <link href="{!! asset('css/bootstrap.css') !!}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{!! asset('css/style.css') !!}" rel="stylesheet" type="text/css" media="all" />
-    {{--<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />--}}
     <link href="{!! asset('css/fasthover.css') !!}" rel="stylesheet" type="text/css" media="all" />
     <link href="{!! asset('css/popuo-box.css') !!}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{!! asset('css/style.css') !!}" rel="stylesheet" type="text/css" media="all" />
+    <!-- <link href="{!! asset('css/app.css') !!}" rel="stylesheet" type="text/css" media="all" /> -->
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
     <link href="{!! asset('css/font-awesome.css') !!}" rel="stylesheet">

@@ -3,7 +3,16 @@
     <div class="container">
         <div id="app"></div>
         <div class="w3l_login">
-            <a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+            <!-- <a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a> -->
+            @if (Auth::check())
+                <form action="{{ url('logout') }}" method="POST">
+                    {{ csrf_field() }}
+                    <button class="glyphicon glyphicon-log-out" aria-hidden="true"></button>
+                </form>
+            @else
+                <a href="{{ url('login') }}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                <a href="{{ url('register') }}" id="register-link">Register</a>
+            @endif
         </div>
         <div class="w3l_logo">
             <h1><a href="index.html">Electronic Store<span>Your stores. Your place.</span></a></h1>

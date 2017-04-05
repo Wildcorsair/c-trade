@@ -20,26 +20,28 @@
                                 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                     <div class="facts">
                                         <div class="register">
-                                            <!-- <form action="#" method="post"> -->
+                                            <form action="{!! url('/login') !!}" method="POST">
+                                                {{ csrf_field() }}
                                                 <input name="email" placeholder="Email Address" type="text" required="">
                                                 <input name="password" placeholder="Password" type="password" required="">
                                                 <div class="sign-up">
-                                                    <input type="submit" value="Sign in"/>
+                                                    <input id="login-button-submit" type="submit" value="Sign in"/>
                                                 </div>
-                                            <!-- </form> -->
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
                                     <div class="facts">
                                         <div class="register">
-                                            <form action="#" method="post">
-                                                <input placeholder="Name" name="Name" type="text" required="">
-                                                <input placeholder="Email Address" name="Email" type="email" required="">
-                                                <input placeholder="Password" name="Password" type="password" required="">
-                                                <input placeholder="Confirm Password" name="Password" type="password" required="">
+                                            <form action="{!! url('/register') !!}" method="POST">
+                                                {{ csrf_field() }}
+                                                <input placeholder="Name" name="full_name" type="text" required="">
+                                                <input placeholder="Email Address" name="email" type="email" required="">
+                                                <input placeholder="Password" name="password" type="password" required="">
+                                                <input placeholder="Confirm Password" name="confirm_password" type="password" required="">
                                                 <div class="sign-up">
-                                                    <input type="submit" value="Create Account"/>
+                                                    <input id="register-button-submit" type="submit" value="Create Account"/>
                                                 </div>
                                             </form>
                                         </div>
@@ -80,6 +82,6 @@
     </div>
 </div>
 <script>
-//    $('#myModal88').modal('show');
+   // $('#myModal88').modal('show');
 </script>
 <!-- header modal -->

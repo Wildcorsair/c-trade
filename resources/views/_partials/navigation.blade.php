@@ -13,10 +13,10 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}" class="act">Home</a></li>
+                    <li><a href="{{ url('/') }}" class="{{ Request::is('/') ? 'act' : '' }}">Home</a></li>
                     <!-- Mega Menu -->
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                        <a href="#" class="{{ Request::is('products') ? 'act' : '' }} dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-3">
                             <div class="row">
                                 <div class="col-sm-3">
@@ -56,14 +56,14 @@
                             </div>
                         </ul>
                     </li>
-                    <li><a href="{{ url('about') }}">About Us</a></li>
+                    <li><a href="{{ url('about') }}" class="{{ Request::is('about') ? 'act' : '' }}">About Us</a></li>
                     <li class="w3pages"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="icons.html">Web Icons</a></li>
                             <li><a href="codes.html">Short Codes</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ route('mailUs') }}">Mail Us</a></li>
+                    <li><a href="{{ route('mailUs') }}" class="{{ Request::is('contact') ? 'act' : '' }}">Mail Us</a></li>
                 </ul>
             </div>
         </nav>
