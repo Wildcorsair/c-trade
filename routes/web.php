@@ -14,6 +14,7 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
+Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
 
 Route::get('about', 'PageController@about');
 Route::get('contact', ['as' => 'mailUs', 'uses' => 'PageController@contact']);
