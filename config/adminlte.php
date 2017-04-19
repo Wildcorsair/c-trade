@@ -117,7 +117,7 @@ return [
         [
             'text'        => 'Users',
             'url'         => 'dashboard/users',
-            'icon'        => 'user',
+            'icon'        => 'users',
             'label'       => 4,
             'label_color' => 'success',
         ],
@@ -132,7 +132,7 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'lock',
         ],
-        [
+        /*[
             'text'    => 'Multilevel',
             'icon'    => 'share',
             'submenu' => [
@@ -169,7 +169,7 @@ return [
                     'url'  => '#',
                 ],
             ],
-        ],
+        ],*/
         'LABELS',
         [
             'text'       => 'Important',
