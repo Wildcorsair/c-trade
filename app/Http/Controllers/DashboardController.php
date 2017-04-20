@@ -14,8 +14,17 @@ class DashboardController extends Controller
 
     public function users()
     {
-
         $users = User::all();
-        return view('dashboard.users')->with('users', $users);
+        return view('dashboard.users.index')->with('users', $users);
+    }
+
+    public function createUser()
+    {
+        return view('dashboard.users.create');
+    }
+
+    public function storeUser()
+    {
+        return view('dashboard.users.create');
     }
 }

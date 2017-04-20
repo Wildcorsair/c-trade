@@ -8,6 +8,9 @@
 
 @section('content')
     <div class="box">
+        <div class="box-header">
+            <a href="{{ route('users.create') }}" class="btn btn-primary">Create</a>
+        </div>
         <div class="box-body no-padding">
             <table class="table">
                 <thead>
