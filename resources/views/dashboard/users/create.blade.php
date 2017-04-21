@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>New User<small>Create</small></h1>
+    <h1>User<small>Create</small></h1>
 @stop
 
 @section('content')
@@ -12,6 +12,7 @@
             <div class="box box-primary">
                 <div class="box-body">
                     <div class="form-group">
+                        {{ csrf_field() }}
                         <label for="first-name">First Name</label>
                         <input id="first-name" class="form-control" type="text" name="first_name" value="">
                     </div>

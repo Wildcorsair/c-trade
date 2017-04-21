@@ -7,6 +7,11 @@ use App\User;
 
 class DashboardController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth', 'CheckRole']);
+    }
+
     public function index()
     {
         return view('dashboard.index');
