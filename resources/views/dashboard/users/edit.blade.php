@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>User<small>Create</small></h1>
+    <h1>User<small>Edit</small></h1>
 @stop
 
 @section('content')
@@ -28,31 +28,41 @@
                 </div>
             </div>
         @endif
-        <form class="col-md-12" action="{{ route('users.store') }}" method="POST">
-            <div class="box box-primary">
+        <form class="col-md-12" action="{{ route('users.update', ['id' => $user->id]) }}" method="POST">
+            <div class="box box-success">
                 <div class="box-body">
                     <div class=" col-md-6">
                         <div class="form-group">
                             {{ csrf_field() }}
+                            {!! method_field('PUT') !!}
                             <label for="first-name">First Name</label>
-                            <input id="first-name" class="form-control" type="text" name="first_name" value="{{ old('first_name') }}">
+                            <input id="first-name" class="form-control" type="text" name="first_name" value="{{ $user->first_name }}">
                         </div>
 
                         <div class="form-group">
                             <label for="last-name">Last Name</label>
-                            <input id="last-name" class="form-control" type="text" name="last_name" value="{{ old('last_name') }}">
+                            <input id="last-name" class="form-control" type="text" name="last_name" value="{{ $user->last_name }}">
                         </div>
 
                         <div class="form-group">
                             <label for="email">E-Mail Address</label>
-                            <input id="email" class="form-control" type="text" name="email" value="{{ old('email') }}">
+                            <input id="email" class="form-control" type="text" name="email" disabled value="{{ $user->email }}">
                         </div>
 
                         <div class="form-group">
                             <label for="roles">Roles</label>
-                            <select id="roles" class="form-control select2" multiple="multiple" name="roles[]">
+                            <select id="roles" class="form-control select2" multiple name="roles[]">
                                 @foreach($roles as $role)
-                                    <option value="{{ $role->id }}">{{ $role->name }}</option>
+
+                                    @foreach($userRoles as $userRole)
+
+                                        @if($role->id == $userRole->id)
+                                            <option selected value="{{ $role->id }}">{{ $role->name }}</option>
+                                        @else
+                                            <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                        @endif
+
+                                    @endforeach
                                 @endforeach
                             </select>
                         </div>
@@ -66,7 +76,7 @@
                 <div class="box-footer">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="btn btn-primary pull-right" type="submit" name="create_user" value="Create">
+                            <input class="btn btn-success pull-right" type="submit" name="update_user" value="Update">
                             <a href="{{ route('users') }}" class="btn btn-default">Cancel</a>
                         </div>
                     </div>
@@ -78,11 +88,11 @@
 @stop
 
 @section('css')
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link href="{!! asset('vendor/select2/dist/css/select2.min.css') !!}" rel="stylesheet" />
 @stop
 
 @section('js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="{!! asset('vendor/select2/dist/js/select2.min.js') !!}"></script>
     <script>
         $('#roles').select2();
     </script>

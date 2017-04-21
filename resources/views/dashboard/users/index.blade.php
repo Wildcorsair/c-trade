@@ -3,15 +3,15 @@
 @section('title', 'Dashboard: Users')
 
 @section('content_header')
-    <h1>Dashboard: Users</h1>
+    <h1>Users <small>List</small></h1>
 @stop
 
 @section('content')
-    <div class="box">
+    <div class="box box-primary">
         <div class="box-header">
-            <a href="{{ route('users.create') }}" class="btn btn-primary">Create</a>
+            <a href="{{ route('users.create') }}" class="btn btn-default">Create</a>
         </div>
-        <div class="box-body no-padding">
+        <div class="box-body">
             <table class="table">
                 <thead>
                 <tr>
@@ -29,8 +29,8 @@
                         <td>{{ $user->last_name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Remove</a>
+                            <a href="{{ route('users.edit', ['id' => $user->id]) }}" class="btn btn-xs btn-primary">Edit</a>
+                            <a href="#" class="btn btn-xs btn-danger">Remove</a>
                         </td>
                     </tr>
                 @endforeach
