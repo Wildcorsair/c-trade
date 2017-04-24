@@ -32,7 +32,7 @@ class DashboardController extends Controller
      */
     public function users()
     {
-        $users = User::all();
+        $users = User::orderBy('id', 'DESC')->paginate(10);
         return view('dashboard.users.index')->with('users', $users);
     }
 

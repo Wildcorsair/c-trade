@@ -54,15 +54,20 @@
                             <select id="roles" class="form-control select2" multiple name="roles[]">
                                 @foreach($roles as $role)
 
+                                    {{ $flag = false }}
                                     @foreach($userRoles as $userRole)
 
                                         @if($role->id == $userRole->id)
+                                            {{ $flag = true }}
                                             <option selected value="{{ $role->id }}">{{ $role->name }}</option>
-                                        @else
-                                            <option value="{{ $role->id }}">{{ $role->name }}</option>
                                         @endif
 
                                     @endforeach
+
+                                    @if($flag == false)
+                                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                    @endif
+
                                 @endforeach
                             </select>
                         </div>
