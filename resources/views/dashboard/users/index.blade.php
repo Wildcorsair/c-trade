@@ -8,16 +8,11 @@
 
 @section('content')
     <div class="box box-primary">
+
         <div class="box-header">
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="{{ route('users.create') }}" class="btn btn-default">Create</a>
-                </div>
-                <div class="col-md-6">
-                    <div class="pull-right">{{ $users->links() }}</div>
-                </div>
-            </div>
+            <a href="{{ route('users.create') }}" class="btn btn-default">Create</a>
         </div>
+
         <div class="box-body">
             <table class="table">
                 <thead>
@@ -42,6 +37,10 @@
                     </tr>
                 @endforeach
             </table>
+        </div>
+
+        <div class="box-footer">
+            <div class="box-tools pull-right">{{ $users->links() }}</div>
         </div>
     </div>
 @stop
