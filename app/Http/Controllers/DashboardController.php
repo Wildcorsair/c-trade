@@ -58,6 +58,7 @@ class DashboardController extends Controller
         $this->validate($request, [
             'first_name' => 'required|max:190',
             'last_name'  => 'required|max:190',
+            'roles'      => 'required',
             'email'      => 'required|email|unique:users|max:190',
             'password'   => 'required|min:6'
         ]);
@@ -129,5 +130,15 @@ class DashboardController extends Controller
         Session::flash('success', 'User\'s data was successfully updated!');
 
         return redirect()->route('users.edit', ['id' => $user->id]);
+    }
+
+    public function delete()
+    {
+
+    }
+
+    public function desroy()
+    {
+
     }
 }

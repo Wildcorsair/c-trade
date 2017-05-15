@@ -118,7 +118,7 @@ return [
             'text'        => 'Users',
             'url'         => 'dashboard/users',
             'icon'        => 'users',
-            'label'       => 4,
+            'label'       => '',
             'label_color' => 'success',
         ],
         'ACCOUNT SETTINGS',
